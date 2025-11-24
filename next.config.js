@@ -8,15 +8,7 @@ const nextConfig = {
       },
     ],
   },
-  async redirects() {
-    return [
-      {
-        source: '/.well-known/farcaster.json',
-        destination: 'https://api.farcaster.xyz/miniapps/hosted-manifest/tictactoe-celo-manifest',
-        permanent: false,
-      },
-    ];
-  },
+  // Self-hosted Farcaster manifest at public/.well-known/farcaster.json
 };
 
 module.exports = nextConfig;

@@ -1,0 +1,20 @@
+{
+  "frame": {
+    "name": "Tic Tac Toe on Celo",
+    "version": "1",
+    "iconUrl": "https://tictactoe-celo.vercel.app/icon.png",
+    "homeUrl": "https://tictactoe-celo.vercel.app",
+    "imageUrl": "https://tictactoe-celo.vercel.app/image.png",
+    "splashImageUrl": "https://tictactoe-celo.vercel.app/splash.png",
+    "splashBackgroundColor": "#FCFF52",
+    "webhookUrl": "https://tictactoe-celo.vercel.app/api/webhook",
+    "subtitle": "Play Tic Tac Toe on Celo blockchain",
+    "description": "Play Tic Tac Toe on Celo blockchain",
+    "primaryCategory": "games"
+  },
+  "accountAssociation": {
+    "header": "eyJmaWQiOjQ5MTM1MCwidHlwZSI6ImF1dGgiLCJrZXkiOiIweGYxOTM1NmFEQmZiMjcwZDc5MmIwZkExMjBlNzQ0RTQ3OTI2QTA2ZDAifQ",
+    "payload": "eyJkb21haW4iOiJ0aWN0YWN0b2UtY2Vsby52ZXJjZWwuYXBwIn0",
+    "signature": "h6uhZE/JD5+c98KM0qMH0jATiQhn1gs1rCA7XeW5xkNdhpkBNO1YgF49yI2QDal1lwhXbGpmGc9c4ZE6x0B8Exs="
+  }
+}
