@@ -13,10 +13,10 @@ interface PlayerStatsProps {
 
 export function PlayerStats({ stats }: PlayerStatsProps) {
   const statItems = [
-    { label: "Games", value: stats.games, color: "text-celo-dark" },
-    { label: "Wins", value: stats.wins, color: "text-win" },
-    { label: "Losses", value: stats.losses, color: "text-lose" },
-    { label: "Draws", value: stats.draws, color: "text-celo-purple" },
+    { label: "Games", value: stats.games },
+    { label: "Wins", value: stats.wins },
+    { label: "Losses", value: stats.losses },
+    { label: "Draws", value: stats.draws },
   ];
 
   return (
@@ -24,9 +24,9 @@ export function PlayerStats({ stats }: PlayerStatsProps) {
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2 }}
-      className="bg-white/90 rounded-lg p-4 shadow-md"
+      className="bg-white/95 backdrop-blur-lg rounded-xl p-4 shadow-lg border border-gray-300"
     >
-      <h3 className="text-sm font-semibold text-gray-600 mb-3">Your Stats</h3>
+      <h3 className="text-xs font-bold text-gray-600 mb-3">YOUR STATS</h3>
       <div className="grid grid-cols-4 gap-3">
         {statItems.map((item, index) => (
           <motion.div
@@ -36,8 +36,8 @@ export function PlayerStats({ stats }: PlayerStatsProps) {
             transition={{ delay: 0.3 + index * 0.1 }}
             className="text-center"
           >
-            <p className={`text-2xl font-bold ${item.color}`}>{item.value}</p>
-            <p className="text-xs text-gray-500 mt-1">{item.label}</p>
+            <p className="text-2xl font-black text-gray-800">{item.value}</p>
+            <p className="text-xs text-gray-500 mt-1 font-semibold">{item.label}</p>
           </motion.div>
         ))}
       </div>

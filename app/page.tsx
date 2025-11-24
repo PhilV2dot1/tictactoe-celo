@@ -29,18 +29,19 @@ export default function Home() {
   const isFinished = status === "finished";
 
   return (
-    <main className="min-h-screen bg-celo-yellow p-4 sm:p-8">
-      <div className="max-w-2xl mx-auto space-y-6">
+    <main className="min-h-screen bg-gradient-to-br from-gray-100 via-gray-50 to-[#FCFF52]/30 p-4 sm:p-8">
+      <div className="max-w-md mx-auto space-y-4">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center space-y-2"
+          className="bg-white/95 backdrop-blur-lg rounded-2xl p-4 shadow-xl border-2 border-gray-700 text-center space-y-1"
+          style={{ boxShadow: '0 0 0 6px #FCFF52, 0 20px 25px -5px rgba(0, 0, 0, 0.1)' }}
         >
-          <h1 className="text-4xl sm:text-5xl font-bold text-celo-dark">
+          <h1 className="text-4xl font-black text-gray-900">
             Tic Tac Toe
           </h1>
-          <p className="text-lg text-celo-dark/70">Play on Celo Blockchain</p>
+          <p className="text-sm text-gray-600">Play on Celo Blockchain</p>
         </motion.div>
 
         {/* Mode Toggle */}
@@ -67,9 +68,10 @@ export default function Home() {
             <motion.button
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
+              whileHover={{ scale: 1.05 }}
               onClick={startGame}
               disabled={isProcessing || (mode === "onchain" && !isConnected)}
-              className="px-8 py-3 bg-celo-green text-white rounded-lg font-semibold hover:bg-celo-green/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
+              className="px-8 py-3 bg-gradient-to-r from-gray-800 to-gray-900 hover:from-gray-900 hover:to-black text-white border-2 border-[#FCFF52] rounded-xl font-bold shadow-lg hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isProcessing ? "Starting..." : "Start Game"}
             </motion.button>
@@ -77,9 +79,10 @@ export default function Home() {
             <motion.button
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
+              whileHover={{ scale: 1.05 }}
               onClick={resetGame}
               disabled={isProcessing}
-              className="px-8 py-3 bg-lose/10 text-lose border-2 border-lose rounded-lg font-semibold hover:bg-lose/20 transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow-md"
+              className="px-6 py-2 bg-gradient-to-r from-gray-700 to-gray-800 hover:from-gray-800 hover:to-gray-900 text-white border-2 border-gray-600 rounded-lg font-semibold shadow-md hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
               Reset
             </motion.button>
@@ -99,13 +102,13 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className="text-center text-sm text-celo-dark/60 pt-4"
+          className="text-center text-xs text-gray-500 pt-2"
         >
           <p>
             Built on{" "}
-            <span className="font-semibold text-celo-green">Celo</span> •
+            <span className="font-semibold text-gray-700">Celo</span> •
             Powered by{" "}
-            <span className="font-semibold text-celo-purple">Farcaster</span>
+            <span className="font-semibold text-gray-700">Farcaster</span>
           </p>
         </motion.div>
       </div>

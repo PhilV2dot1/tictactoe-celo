@@ -19,9 +19,12 @@ export function TicTacToeBoard({
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.3 }}
-      className="w-full max-w-[380px] mx-auto"
+      className="w-full mx-auto"
     >
-      <div className="grid grid-cols-3 gap-3 p-4 bg-celo-green/10 rounded-xl">
+      <div
+        className="grid grid-cols-3 gap-3 p-4 bg-white/95 backdrop-blur-lg rounded-2xl shadow-xl border-2 border-gray-700"
+        style={{ boxShadow: '0 0 0 6px #FCFF52, 0 20px 25px -5px rgba(0, 0, 0, 0.1)' }}
+      >
         {board.map((value, index) => (
           <TicTacToeCell
             key={index}

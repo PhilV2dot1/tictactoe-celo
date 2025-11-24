@@ -11,12 +11,8 @@ const config: Config = {
       colors: {
         celo: {
           yellow: '#FCFF52',
-          green: '#35D07F',
-          purple: '#8B5CF6',
           dark: '#1A1A1A',
         },
-        win: '#4CAF50',
-        lose: '#FF5252',
       },
     },
   },

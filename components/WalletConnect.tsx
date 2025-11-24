@@ -14,18 +14,18 @@ export function WalletConnect() {
       <motion.div
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
-        className="bg-white/90 rounded-lg p-4 shadow-md border-2 border-celo-green"
+        className="bg-gradient-to-r from-[#FCFF52]/30 to-gray-100 rounded-xl p-4 shadow-lg border-2 border-[#FCFF52]"
       >
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm text-gray-600 font-medium">Connected</p>
-            <p className="font-mono text-sm text-celo-dark">
+            <p className="text-xs text-gray-600 font-semibold">Connected</p>
+            <p className="font-mono text-sm font-bold text-gray-900">
               {address.slice(0, 6)}...{address.slice(-4)}
             </p>
           </div>
           <button
             onClick={() => disconnect()}
-            className="px-4 py-2 bg-lose/10 text-lose rounded-md font-semibold hover:bg-lose/20 transition-colors"
+            className="px-4 py-2 bg-gray-700 hover:bg-gray-800 text-white rounded-lg font-semibold transition-colors"
           >
             Disconnect
           </button>
@@ -38,9 +38,9 @@ export function WalletConnect() {
     <motion.div
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
-      className="bg-white/90 rounded-lg p-4 shadow-md border-2 border-celo-purple/30"
+      className="bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl p-4 shadow-lg border-2 border-[#FCFF52]"
     >
-      <p className="text-sm text-gray-600 font-medium mb-3">
+      <p className="text-sm text-gray-200 font-semibold mb-3">
         Connect wallet to play on-chain
       </p>
       <div className="flex flex-col gap-2">
@@ -50,8 +50,9 @@ export function WalletConnect() {
             onClick={() => connect({ connector })}
             disabled={isPending}
             className={cn(
-              "px-4 py-2 rounded-md font-semibold transition-colors",
-              "bg-celo-green text-white hover:bg-celo-green/90",
+              "px-4 py-2 rounded-lg font-bold transition-all",
+              "bg-gradient-to-r from-[#FCFF52] to-yellow-300 text-gray-900",
+              "hover:from-yellow-300 hover:to-[#FCFF52]",
               "disabled:opacity-50 disabled:cursor-not-allowed"
             )}
           >

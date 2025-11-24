@@ -18,15 +18,14 @@ export function TicTacToeCell({ value, onClick, disabled }: TicTacToeCellProps) 
       whileTap={!disabled && value === 0 ? { scale: 0.95 } : {}}
       className={cn(
         "aspect-square flex items-center justify-center",
-        "bg-white/90 rounded-lg shadow-md",
-        "text-4xl sm:text-5xl font-bold",
+        "bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl shadow-md",
+        "text-4xl sm:text-5xl font-black",
         "transition-all duration-200",
         "border-2",
         value === 0 && !disabled
-          ? "border-celo-green/30 hover:border-celo-green hover:shadow-lg cursor-pointer"
-          : "border-transparent cursor-not-allowed",
-        value === 1 && "text-celo-purple",
-        value === 2 && "text-celo-green"
+          ? "border-gray-300 hover:border-[#FCFF52] hover:shadow-lg cursor-pointer"
+          : "border-gray-200 cursor-not-allowed",
+        "text-gray-800"
       )}
     >
       {value === 1 && (

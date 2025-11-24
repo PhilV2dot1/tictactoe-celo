@@ -18,12 +18,11 @@ export function GameStatus({ message, result }: GameStatusProps) {
         exit={{ opacity: 0, y: 10 }}
         transition={{ duration: 0.3 }}
         className={cn(
-          "px-6 py-3 rounded-lg font-semibold text-center",
-          "shadow-md border-2",
-          result === "win" && "bg-win/10 border-win text-win",
-          result === "lose" && "bg-lose/10 border-lose text-lose",
-          result === "draw" && "bg-celo-purple/10 border-celo-purple text-celo-purple",
-          !result && "bg-celo-green/10 border-celo-green text-celo-dark"
+          "px-6 py-3 rounded-xl font-bold text-center shadow-lg border-2",
+          result === "win" && "bg-gradient-to-br from-gray-700 via-gray-800 to-gray-900 border-[#FCFF52] text-white",
+          result === "lose" && "bg-gradient-to-br from-gray-600 via-gray-700 to-gray-800 border-gray-500 text-white",
+          result === "draw" && "bg-gradient-to-br from-gray-700 to-gray-800 border-[#FCFF52] text-white",
+          !result && "bg-white/90 border-gray-700 text-gray-900"
         )}
       >
         {message}
