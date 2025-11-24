@@ -62,7 +62,7 @@
   <!-- Right side - Text (optimized for better impact) -->
   <g transform="translate(540, 0)">
     <!-- Main title -->
-    <text x="330" y="280" font-size="115" fill="#1f2937" font-family="system-ui, -apple-system, sans-serif" font-weight="900" text-anchor="middle" letter-spacing="-3">Tic-Tac-Toe</text>
+    <text x="330" y="290" font-size="100" fill="#1f2937" font-family="system-ui, -apple-system, sans-serif" font-weight="900" text-anchor="middle" letter-spacing="-3">Tic-Tac-Toe</text>
 
     <!-- Subtitle -->
     <text x="330" y="370" font-size="46" fill="#4b5563" font-family="system-ui, -apple-system, sans-serif" font-weight="700" text-anchor="middle">Play on Celo Blockchain</text>
