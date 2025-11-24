@@ -40,6 +40,18 @@ export interface GameStats {
   draws: number;
 }
 
+export async function shareOnFarcaster(text: string, embeds?: string[]) {
+  const embedsParam = embeds?.map(e => `embeds[]=${encodeURIComponent(e)}`).join('&') || '';
+  const shareUrl = `https://warpcast.com/~/compose?text=${encodeURIComponent(text)}${embedsParam ? '&' + embedsParam : ''}`;
+
+  try {
+    await sdk.actions.openUrl(shareUrl);
+  } catch (error) {
+    // Fallback: open in new window
+    window.open(shareUrl, '_blank');
+  }
+}
+
 export async function shareGameResult(
   result: "win" | "lose" | "draw",
   stats: GameStats,
@@ -59,22 +71,5 @@ export async function shareGameResult(
 
   const text = `I just played Tic Tac Toe on Celo!\n\n${emojis[result]} ${messages[result]}\n\nStats: ${stats.wins}W / ${stats.losses}L / ${stats.draws}D\n\nPlay now:`;
 
-  try {
-    // Try to use Farcaster SDK to share
-    const context = await sdk.context;
-    if (context) {
-      // In Farcaster, copy to clipboard so user can paste in composer
-      await navigator.clipboard.writeText(`${text}\n${appUrl}`);
-      return { success: true, method: "clipboard" };
-    }
-  } catch (error) {
-    console.error("Failed to share via Farcaster:", error);
-  }
-
-  // Fallback: Open Warpcast composer
-  const warpcastUrl = `https://warpcast.com/~/compose?text=${encodeURIComponent(
-    text
-  )}&embeds[]=${encodeURIComponent(appUrl)}`;
-  window.open(warpcastUrl, "_blank");
-  return { success: true, method: "warpcast" };
+  await shareOnFarcaster(text, [appUrl]);
 }
