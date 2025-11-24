@@ -1,0 +1,71 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient - subtle gray -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f3f4f6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#f9fafb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FCFF52;stop-opacity:0.15" />
+    </linearGradient>
+
+    <!-- Dark gradient for board background -->
+    <linearGradient id="boardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.95" />
+      <stop offset="100%" style="stop-color:#f9fafb;stop-opacity:0.95" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1024" height="1024" fill="url(#bgGradient)"/>
+
+  <!-- Main container with glassmorphism effect -->
+  <g transform="translate(512, 380)">
+    <!-- Outer border (yellow accent) -->
+    <rect x="-185" y="-185" width="370" height="370" rx="32" fill="none" stroke="#FCFF52" stroke-width="12"/>
+
+    <!-- Board background with slight offset for double border effect -->
+    <rect x="-180" y="-180" width="360" height="360" rx="28" fill="url(#boardBg)" stroke="#374151" stroke-width="4"/>
+
+    <!-- Grid lines -->
+    <line x1="-180" y1="-60" x2="180" y2="-60" stroke="#d1d5db" stroke-width="3"/>
+    <line x1="-180" y1="60" x2="180" y2="60" stroke="#d1d5db" stroke-width="3"/>
+    <line x1="-60" y1="-180" x2="-60" y2="180" stroke="#d1d5db" stroke-width="3"/>
+    <line x1="60" y1="-180" x2="60" y2="180" stroke="#d1d5db" stroke-width="3"/>
+
+    <!-- X in top-left (position 0,0) -->
+    <g transform="translate(-120, -120)">
+      <line x1="-30" y1="-30" x2="30" y2="30" stroke="#1f2937" stroke-width="12" stroke-linecap="round"/>
+      <line x1="30" y1="-30" x2="-30" y2="30" stroke="#1f2937" stroke-width="12" stroke-linecap="round"/>
+    </g>
+
+    <!-- O in top-right (position 0,2) -->
+    <g transform="translate(120, -120)">
+      <circle cx="0" cy="0" r="35" fill="none" stroke="#1f2937" stroke-width="12"/>
+    </g>
+
+    <!-- X in center (position 1,1) -->
+    <g transform="translate(0, 0)">
+      <line x1="-30" y1="-30" x2="30" y2="30" stroke="#1f2937" stroke-width="12" stroke-linecap="round"/>
+      <line x1="30" y1="-30" x2="-30" y2="30" stroke="#1f2937" stroke-width="12" stroke-linecap="round"/>
+    </g>
+
+    <!-- O in bottom-left (position 2,0) -->
+    <g transform="translate(-120, 120)">
+      <circle cx="0" cy="0" r="35" fill="none" stroke="#1f2937" stroke-width="12"/>
+    </g>
+
+    <!-- X in bottom-right (position 2,2) -->
+    <g transform="translate(120, 120)">
+      <line x1="-30" y1="-30" x2="30" y2="30" stroke="#1f2937" stroke-width="12" stroke-linecap="round"/>
+      <line x1="30" y1="-30" x2="-30" y2="30" stroke="#1f2937" stroke-width="12" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- Title text -->
+  <text x="512" y="700" font-size="80" fill="#1f2937" font-family="system-ui, -apple-system, sans-serif" font-weight="900" text-anchor="middle" letter-spacing="-2">Tic-Tac-Toe</text>
+
+  <!-- Subtitle -->
+  <text x="512" y="780" font-size="48" fill="#4b5563" font-family="system-ui, -apple-system, sans-serif" font-weight="700" text-anchor="middle">on Celo</text>
+
+  <!-- Yellow accent line -->
+  <rect x="362" y="810" width="300" height="6" rx="3" fill="#FCFF52"/>
+</svg>
